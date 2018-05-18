@@ -22,8 +22,9 @@ public class Openbrowser {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
     @AfterTest
-    public void terminateBrowser(){
-        driver.close();
+    public void stop() {
+        driver.quit();
+        driver = null;
     }
 }
 
